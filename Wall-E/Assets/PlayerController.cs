@@ -32,6 +32,8 @@ public class PlayerController : MonoBehaviour {
 			player_animator.SetFloat("X_input",X_input);
 			player_animator.SetFloat("Y_input",Y_input);
 			player_animator.Play("MoveAnimation");
+			Debug.Log(player_animator.GetFloat("X_input"));
+			Debug.Log(player_animator.GetFloat("Y_input"));
 		}
 		else {
 			player_animator.Play("IdleAnimation");
