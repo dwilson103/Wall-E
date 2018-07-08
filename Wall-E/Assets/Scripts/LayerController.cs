@@ -22,8 +22,6 @@ public class LayerController : MonoBehaviour {
 	void Update () {
 		playerPosition = player.transform.position;
 		objectPosition = transform.position;
-		Debug.Log(playerPosition.y);
-		Debug.Log(objectPosition.y);
 
 		DynamicLayerer();
 	}
