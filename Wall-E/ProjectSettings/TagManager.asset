@@ -41,12 +41,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Environment
+  - name: Background
+    uniqueID: 2422211573
+    locked: 0
+  - name: Dynamic Layer
     uniqueID: 67950815
     locked: 0
   - name: Player
     uniqueID: 3129953133
-    locked: 0
-  - name: Foreground
-    uniqueID: 2422211573
     locked: 0
