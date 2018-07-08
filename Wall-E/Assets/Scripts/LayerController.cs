@@ -9,7 +9,7 @@ public class LayerController : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-			GetComponent<SpriteRenderer>().sortingOrder = Mathf.RoundToInt(transform.position.y*100)*-1;
+			GetComponent<SpriteRenderer>().sortingOrder = Mathf.RoundToInt((transform.position.y + GetComponent<BoxCollider2D>().offset.y)*100)*-1;
 	}
 
 }
