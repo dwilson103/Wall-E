@@ -44,7 +44,7 @@ TagManager:
   - name: Background
     uniqueID: 2422211573
     locked: 0
-  - name: Environment
+  - name: Dynamic Layer
     uniqueID: 67950815
     locked: 0
   - name: Player
