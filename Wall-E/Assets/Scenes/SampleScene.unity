@@ -313,7 +313,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 67950815
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 95734febbbdd5402590b753d0a6b818c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -349,7 +349,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10001c10f435e443c94cdc06d59ca823, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1676085520}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -577,7 +576,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 67950815
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: c35cb91c666604c4ab4df832f7002d66, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -613,7 +612,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10001c10f435e443c94cdc06d59ca823, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1676085520}
 --- !u!1 &690493866
 GameObject:
   m_ObjectHideFlags: 0
@@ -690,7 +688,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 67950815
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 84421971320a54a81ac445e774a5352e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -726,7 +724,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10001c10f435e443c94cdc06d59ca823, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1676085520}
 --- !u!1 &1370121547
 GameObject:
   m_ObjectHideFlags: 0
@@ -797,7 +794,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 67950815
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 90f5f764261c94874a50d826276129bb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -858,7 +855,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10001c10f435e443c94cdc06d59ca823, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1676085520}
 --- !u!1 &1666390748
 GameObject:
   m_ObjectHideFlags: 0
@@ -945,7 +941,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1165014163
+  m_SortingLayerID: 67950815
   m_SortingLayer: 2
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300064, guid: d8c6c3bcce9a344e9a08bd6d3ab2efa9, type: 3}
@@ -1046,101 +1042,17 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!82 &1676085527
-AudioSource:
+--- !u!114 &1676085527
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1676085520}
   m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 7dded8fa451b246ee8c3ce3c9f9dd9a5, type: 3}
-  m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10001c10f435e443c94cdc06d59ca823, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1874737812
 GameObject:
   m_ObjectHideFlags: 0
@@ -1189,7 +1101,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 67950815
+  m_SortingLayerID: -1872755723
   m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 183637768a093d842a8b32d4fcba15ac, type: 3}
