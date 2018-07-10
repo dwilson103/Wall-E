@@ -47,6 +47,9 @@ TagManager:
   - name: Dynamic Layer
     uniqueID: 67950815
     locked: 0
-  - name: Player
+  - name: Border
     uniqueID: 3129953133
+    locked: 0
+  - name: Foreground
+    uniqueID: 3242213259
     locked: 0
