@@ -19,13 +19,24 @@ public class PlayerController : MonoBehaviour {
 	private Vector2 dashVector;
 	public float dashTime;
 	public float dashMultiplier;
+	
+	private static bool playerExists;
 
 	// Use this for initialization
 	void Start () {
 		player_rigid_body = GetComponent<Rigidbody2D>();
 		player_animator = GetComponent<Animator>();
 		player_audio = GetComponent<AudioSource>();
+
+		if(!playerExists) {
+			playerExists = true;
+			DontDestroyOnLoad(transform.gameObject);
+		}
+		else {
+			Destroy(gameObject);
+		}
 	}
+
 	
 	// Update is called once per frame
 	void Update () {
