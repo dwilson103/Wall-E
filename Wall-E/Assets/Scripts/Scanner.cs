@@ -45,6 +45,13 @@ public class Scanner : MonoBehaviour {
             player_box_collider.offset,
             player_facing_direction,
             Mathf.Infinity);
+
+        GameObject resultObj = result.collider.gameObject;
+
+        if(resultObj.tag == "HM") {
+            PlayerStatus.AddNewAbility(resultObj.name);
+            GameObject.Destroy(resultObj);
+        } 
         
        
         Debug.Log("Scanner result: " + result.collider);
