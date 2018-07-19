@@ -19,7 +19,7 @@ public class PlayerController : MonoBehaviour {
 	private Vector2 dashVector;
 	public float dashTime;
 	public float dashMultiplier;
-	
+
 	private static bool playerExists;
 
 	// Use this for initialization
@@ -27,6 +27,8 @@ public class PlayerController : MonoBehaviour {
 		player_rigid_body = GetComponent<Rigidbody2D>();
 		player_animator = GetComponent<Animator>();
 		player_audio = GetComponent<AudioSource>();
+
+		dashVector = new Vector2(0,0);
 
 		if(!playerExists) {
 			playerExists = true;
@@ -40,8 +42,9 @@ public class PlayerController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if(PlayerStatus.PlayerHasAbility("Dash")) PlayerDash();
+		
 		MovePlayer();
-		PlayerDash();
 	}
 
 	void OnCollisionEnter2D(Collision2D col) {
@@ -75,7 +78,6 @@ public class PlayerController : MonoBehaviour {
 			
 		}
 
-		PlayerDash();
 
 		Vector2 movementVector = dashCountdown > 0
 			? dashVector
@@ -85,7 +87,6 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	private void PlayerDash() {
-
 		if(Input.GetKeyDown(KeyCode.F) && dashCountdown <= 0 && dashCooldown <= 0) {
 			dashCountdown = dashTime;
 			dashVector = new Vector2(player_animator.GetFloat("X_input"), player_animator.GetFloat("Y_input")) * dashMultiplier;
