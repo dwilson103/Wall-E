@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/HiddenCave.unity
     guid: 1d4308b6c964d6342923d52a1092be03
+  - enabled: 1
+    path: Assets/Scenes/HomeCave.unity
+    guid: 42a2f9c67e3c243748fc7bc7c461b9d5
   m_configObjects: {}
