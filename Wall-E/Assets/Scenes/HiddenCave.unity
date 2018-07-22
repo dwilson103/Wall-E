@@ -189,6 +189,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1496739667}
   - component: {fileID: 1496739668}
+  - component: {fileID: 1496739669}
   m_Layer: 0
   m_Name: Dash
   m_TagString: HM
@@ -234,6 +235,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.221073, y: 0.3232273}
   m_EdgeRadius: 0
+--- !u!114 &1496739669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1496739666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d70c68d5d9fa44aebd528b9c9e1109a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectName: Dash
+  infoText: Supercharge your wheels! Press 'F' for a short burst of speed! With this
+    speed, who knows what you can break...
 --- !u!1 &1972046213
 GameObject:
   m_ObjectHideFlags: 0

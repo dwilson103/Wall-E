@@ -42,9 +42,10 @@ public class PlayerController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(PlayerStatus.PlayerHasAbility("Dash")) PlayerDash();
-		
-		MovePlayer();
+		if(!TextController.inConversation) {
+			if(PlayerStatus.PlayerHasAbility("Dash")) PlayerDash();
+			MovePlayer();
+		}
 	}
 
 	void OnCollisionEnter2D(Collision2D col) {

@@ -2,8 +2,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Scanner : MonoBehaviour {
+
+    public float interactionRange;
 
     private Vector2 player_facing_direction = Vector2.zero;
 
@@ -44,16 +47,56 @@ public class Scanner : MonoBehaviour {
             (Vector2)player_rigid_body.transform.position +
             player_box_collider.offset,
             player_facing_direction,
-            Mathf.Infinity);
+            interactionRange);
 
         GameObject resultObj = result.collider.gameObject;
 
-        if(resultObj.tag == "HM") {
-            PlayerStatus.AddNewAbility(resultObj.name);
-            GameObject.Destroy(resultObj);
+        switch (resultObj.tag) {
+            case "HM":
+                HMInteraction(resultObj);
+                break;
+            case "NPC":
+                NPCInteraction(resultObj);
+                break;
+            case "Interactable":
+                ObjectInteraction(resultObj);
+                break;
+            default:
+                Debug.Log("No Interaction for this object");
+                break;
         } 
         
        
         Debug.Log("Scanner result: " + result.collider);
+    }
+
+    private void HMInteraction(GameObject HMObj) {
+        InteractableObject HMInfo = HMObj.GetComponent<InteractableObject>();
+
+        string HMName = HMInfo.objectName;
+        string HMText = HMInfo.infoText;
+
+        TextController.DisplayHMText(HMName, HMText);
+
+        PlayerStatus.AddNewAbility(HMObj.name);
+        GameObject.Destroy(HMObj);
+    }
+
+    private void NPCInteraction(GameObject NPCObj) {
+        List<string> dialogue = new List<string>();
+
+        dialogue.Add("Hello I am Crow #1");
+        dialogue.Add("CAAAWWWWWWWWWWW [I am crow number 2]");
+
+        TextController.DisplayNPCText("Crow", dialogue);
+    }
+
+    private void ObjectInteraction(GameObject envObj) {
+        InteractableObject objInteractionInfo = envObj.GetComponent<InteractableObject>();
+
+        string infoText = objInteractionInfo.infoText;
+        string objectName = objInteractionInfo.objectName;
+
+        TextController.DisplayInfoText(objectName, infoText);
     }
 }

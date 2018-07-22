@@ -8909,9 +8909,10 @@ GameObject:
   - component: {fileID: 1392059245}
   - component: {fileID: 1392059244}
   - component: {fileID: 1392059248}
+  - component: {fileID: 1392059249}
   m_Layer: 0
   m_Name: Vending Machine
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9030,6 +9031,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 6
+--- !u!114 &1392059249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1392059243}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d70c68d5d9fa44aebd528b9c9e1109a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectName: Vending Machine
+  infoText: Nutritional suppliments for organic lifeforms. 289y 10m 23d 8h 9m 12s
+    past optimum consuption date
 --- !u!1 &1397261556
 GameObject:
   m_ObjectHideFlags: 0
@@ -10586,11 +10601,11 @@ GameObject:
   m_Component:
   - component: {fileID: 1676085522}
   - component: {fileID: 1676085521}
-  - component: {fileID: 1676085524}
   - component: {fileID: 1676085523}
   - component: {fileID: 1676085525}
   - component: {fileID: 1676085526}
   - component: {fileID: 1676085527}
+  - component: {fileID: 1676085524}
   - component: {fileID: 1676085528}
   - component: {fileID: 1676085529}
   - component: {fileID: 1676085530}
@@ -10853,6 +10868,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1e55f0fa7d1d5240baa34cb6f72e32f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactionRange: 0.5
 --- !u!114 &1676085530
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11952,7 +11968,7 @@ GameObject:
   - component: {fileID: 1769948685}
   m_Layer: 0
   m_Name: Birds
-  m_TagString: Untagged
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11969,7 +11985,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.10233897, y: -0.00930357}
+  m_Offset: {x: 0.10233897, y: -0.1509068}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -11980,7 +11996,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.2046779, y: 0.98139286}
+  m_Size: {x: 1.059029, y: 0.5849042}
   m_EdgeRadius: 0
 --- !u!4 &1769948686
 Transform:
